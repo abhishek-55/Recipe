@@ -1,9 +1,72 @@
 *{
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
+}
+body{
+    min-height: 100vh;
 }
 
 #title{
     font-family: 'Bree Serif', serif;
     font-size: 2rem;
+}
+
+.card-image{
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+}
+
+.card-container{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.ingredients-input {
+    margin: 0 auto;
+    width: 85%;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease 3s forwards;
+}
+
+.helper-text{
+    font-family: 'Poppins','Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    margin: 2rem;
+    position: relative;
+}
+
+.helper-text::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: white; 
+    animation: typing 8s steps(150) forwards;
+}
+
+@keyframes typing {
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes fadeInUp {
+    to{
+        transform: translateY(0rem);
+        opacity: 1;
+    }
 }
